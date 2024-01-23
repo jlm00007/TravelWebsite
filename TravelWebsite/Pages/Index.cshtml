@@ -1,0 +1,25 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<form>
+    <label for="locInp"> Where are you going? </label>
+    <input type="text" id="locInp" class="form-control" value="Where are you Going?"/>
+    <label for="startDateInp">Start Date</label>
+    <input type="date" id="startDateInp"/>
+    <label for="endDateInp">End Date</label>
+    <input type="date" id="endDateInp" />
+    <label for="plpDrop">Number of People?</label>
+    <select name="plpDrop">
+        <option value="1">1 Person</option>
+        <option value="2">2 People</option>
+        <option value="3">3 People</option>
+
+    </select>
+    <input type="submit" id="submitBtn" value="Search" class="btn btn-primary"/>
+
+
+
+</form>
