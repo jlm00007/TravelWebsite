@@ -4,13 +4,13 @@
     ViewData["Title"] = "Home page";
 }
 
-<form>
+<form action="/SearchResults">
     <label for="locInp"> Where are you going? </label>
-    <input type="text" id="locInp" class="form-control" value="Where are you Going?"/>
+    <input type="text" id="locInp" name="location" class="form-control" value="Where are you Going?"/>
     <label for="startDateInp">Start Date</label>
-    <input type="date" id="startDateInp"/>
+    <input type="date" id="startDateInp" name="checkIn"/>
     <label for="endDateInp">End Date</label>
-    <input type="date" id="endDateInp" />
+    <input type="date" id="endDateInp" name="checkOut" />
     <label for="plpDrop">Number of People?</label>
     <select name="plpDrop">
         <option value="1">1 Person</option>
@@ -18,8 +18,14 @@
         <option value="3">3 People</option>
 
     </select>
+    <input type="number" id="latTxt" step="any" name="latitude" style="visibility;hidden"/>
+    <input type="number" id="longTxt" step="any" name="longitude" style="visibility;hidden" />
+
     <input type="submit" id="submitBtn" value="Search" class="btn btn-primary"/>
 
 
 
 </form>
+<button id="locBtn" onclick="getLocation()"><i class="fa fa-location-arrow"></i></button>
+
+<div id="results"></div>
